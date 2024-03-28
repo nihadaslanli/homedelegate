@@ -60,15 +60,16 @@ List<Employee> emmployees = new()
  new(){Id=Guid.NewGuid(),Name="name1",Age=16,Salary=1500 },
  new(){Id=Guid.NewGuid(),Name="name2",Age=21,Salary=2500 },
  new(){Id=Guid.NewGuid(),Name="name3",Age=19,Salary=3500 },
- new(){Id=Guid.NewGuid(),Name="name4",Age=59,Salary=3500 },
+ new(){Id=Guid.NewGuid(),Name="name4",Age=49,Salary=3500 },
 };
 var newList = emmployees.FindAll(e=>e.Age > 20 && e.Age < 40);
+double sum = default;
    
 foreach (var item in newList)
 {
-    Console.WriteLine(item);
+    sum += item.Salary;
 }
-
+Console.WriteLine(sum/newList.Count);
 
 #endregion
 
