@@ -8,11 +8,12 @@ namespace homedelegate.Model
 {
     internal class Person
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Adress { get; set; }
         public double Salary { get; set; }
+       
 
 
         public override string ToString()
