@@ -63,13 +63,11 @@ List<Employee> emmployees = new()
  new(){Id=Guid.NewGuid(),Name="name4",Age=49,Salary=3500 },
 };
 var newList = emmployees.FindAll(e=>e.Age > 20 && e.Age < 40);
-double sum = default;
-   
-foreach (var item in newList)
-{
-    sum += item.Salary;
-}
-Console.WriteLine(sum/newList.Count);
+var sumSalary=newList.Sum(e=>e.Salary);
+var minSalary=newList.Min(e=>e.Salary);
+var maxSalary=newList.Max(e=>e.Salary);
+var avrSalary=newList.Average(e=>e.Salary);
+Console.WriteLine(avrSalary);
 
 #endregion
 
